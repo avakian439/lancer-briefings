@@ -1,6 +1,6 @@
 <template>
 	<div class="page-wrapper">
-		<Header :planet-path="planetPath" :class="{ animate: animate }" :header="header" />
+		<Header :icon="icon" :planet-path="planetPath" :class="{ animate: animate }" :header="header" />
 		<Sidebar :animate="animate" :class="{ animate: animate }" />
 	</div>
 	<div id="router-view-container">
@@ -39,6 +39,7 @@ export default {
 			animate: Config.animate,
 			initialSlug: Config.initialSlug,
 			planetPath: Config.planetPath,
+			icon: Config.icon,
 			header: Config.header,
 			pilotSpecialInfo: Config.pilotSpecialInfo,
 			clocks: [],

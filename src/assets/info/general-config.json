@@ -2,18 +2,18 @@
   "initialSlug": "001",
   "planetPath": "/planet.webm",
   "animate": true,
-  "defaultTitle": "MSMC |",
-  "icon": "/faction-logos/msmc.svg",
+  "defaultTitle": "UNS-CV Rio Grande",
+  "icon": "/faction-logos/union.svg",
   "header": {
-    "planet": "Heiligtum-6 'Deep Blue'",
-    "year": "5017u",
-    "system": "Heiligtum",
-    "gate": "Rào Cỏ",
-    "ring": "Annamite",
-    "headerTitle": "Mirrorsmoke",
-    "headerSubtitle": "Mercenary Company",
-    "subheaderTitle": "Contract Work",
-    "subheaderSubtitle": "Sierra-Whiskey-Alpha-Golf"
+    "planet": "Cressidium",
+    "year": "5016u",
+    "system": "REDACTED",
+    "gate": "REDACTED",
+    "ring": "REDACTED",
+    "headerTitle": "UNION NAVY",
+    "headerSubtitle": "Union Naval Department",
+    "subheaderTitle": "UNS-CV Rio Grande",
+    "subheaderSubtitle": "OPERATION SOLSTICE RAIN"
   },
   "pilotSpecialInfo": {}
 }

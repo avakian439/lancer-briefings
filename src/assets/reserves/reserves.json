@@ -1,2 +1,8 @@
 [
+    {
+        "id": 1,
+        "name": "DESIGNATOR - BOMBARDMENT",
+        "location": "Location 1",
+        "capacity": 100
+    }
 ]

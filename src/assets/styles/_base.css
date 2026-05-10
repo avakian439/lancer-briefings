@@ -9,8 +9,8 @@
 /*-------------------------------------*/
 :root {
 	/* Primary Colors */
-	--primary-color: #7dbbbb;
-	--secondary-color: #161c1dcc;
+	--primary-color: #863d3d;
+	--secondary-color: #1d1616cc;
 	--highlight-hover: rgba(255, 255, 255, 0.3);
 	--highlight-active: rgba(255, 255, 255, 0.1);
 	/* Primary Text */
@@ -23,6 +23,7 @@
 	--text-mission-status: rgba(255, 255, 255, 0.87);
 	--mission-start: rgba(109, 109, 109, 1);
 	--mission-partial: rgba(88, 34, 102, 1);
+	--mission-in-progress: #d89f2e;
 	--mission-success: #226662;
 	--mission-failure: rgba(176, 45, 45, 1);
 	--primary-logo: #0C3C40;
@@ -568,6 +569,10 @@ section .section-header h1 {
 	background-color: var(--mission-start);
 }
 
+.mission .in-progress {
+	background-color: var(--mission-in-progress);
+}
+
 .mission .partial-success {
 	background-color: var(--mission-partial);
 }
@@ -983,6 +988,7 @@ section .section-header h1 {
 .pilot-modal .pilot-header-container {
 	display: flex;
 }
+
 .pilot-modal div .section-header {
 	background-color: var(--primary-color);
 	border-color: var(--primary-color);
@@ -992,6 +998,7 @@ section .section-header h1 {
 	padding-left: 16px;
 	margin-top: -38px !important;
 }
+
 .pilot-modal div .section-header h1 {
 	font-size: 26px;
 	margin: 0%;
@@ -1001,6 +1008,7 @@ section .section-header h1 {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
+
 .pilot-modal .rhombus-back {
 	transform: skew(0.785398rad) !important;
 	background-color: var(--primary-color);
@@ -1012,6 +1020,7 @@ section .section-header h1 {
 	left: -10px;
 	top: -38px;
 }
+
 .pilot-modal div.pilot {
 	background-color: var(--secondary-color);
 	border: 1px solid var(--primary-color);
@@ -1019,12 +1028,15 @@ section .section-header h1 {
 	width: 888px;
 	height: 662px;
 }
+
 .pilot-modal div.pilot div.markdown {
 	height: 662px;
 }
+
 .pilot-modal.portrait .pilot {
 	width: 600px;
 }
+
 .pilot-modal.portrait img.portrait {
 	width: 100%;
 	height: 100%;
@@ -1032,9 +1044,11 @@ section .section-header h1 {
 	object-position: top;
 	overflow: clip;
 }
+
 .pilot-modal.portrait .pilot-header-container {
 	display: flex;
 }
+
 .pilot-modal.portrait .rhombus-back {
 	left: -25px;
 }
@@ -1560,19 +1574,20 @@ div.markdown ol li {
 	font-weight: 800;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	padding:0.5em;
-	display:flex;
+	padding: 0.5em;
+	display: flex;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 
 }
+
 .pilot-identity .col.grow-max {
-	flex-grow:100;
+	flex-grow: 100;
 }
 
 .pilot-identity .header .col img {
-	float:right;
-	height:84px;
+	float: right;
+	height: 84px;
 	width: 84px;
 }
 
@@ -1591,48 +1606,49 @@ div.markdown ol li {
 }
 
 .pilot-identity .body .add-padding {
-	padding:0px 8px;
+	padding: 0px 8px;
 }
 
 .pilot-identity .flex-container-rows {
-	display:flex;
+	display: flex;
 	flex-direction: column;
 }
 
 .pilot-identity .flex-container-cols {
-	display:flex;
+	display: flex;
 	flex-direction: row;
 }
 
 .pilot-identity .col.col-primary {
 	flex: 0 0 66.6666666667%;
-    max-width: 66.6666666667%;
+	max-width: 66.6666666667%;
 }
 
 .pilot-identity .col.col-share {
 	flex: 0 0 50%;
-    max-width: 50%;
+	max-width: 50%;
 }
 
-.pilot-identity .stat-text, .pilot-identity .accent--text{
+.pilot-identity .stat-text,
+.pilot-identity .accent--text {
 	color: var(--primary-color)
 }
 
 .pilot-identity .chip-container {
-	display:inline;
+	display: inline;
 }
 
 .pilot-identity .chip {
-  border: 1px solid var(--primary-color);
-  padding: 4px;
-  margin: 4px;
-  line-height: 16px;
-  border-radius: 5px;
-  display: inline-block;
-  color: var(--primary-color);
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
+	border: 1px solid var(--primary-color);
+	padding: 4px;
+	margin: 4px;
+	line-height: 16px;
+	border-radius: 5px;
+	display: inline-block;
+	color: var(--primary-color);
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .pilot-identity .pilot-image-container {
@@ -1642,7 +1658,7 @@ div.markdown ol li {
 
 .pilot-identity .pilot-image-border {
 	border: 5px double var(--primary-color);
-  	border-radius: 2px;
+	border-radius: 2px;
 	width: 250px;
 	height: 250px;
 }
@@ -1654,39 +1670,43 @@ div.markdown ol li {
 }
 
 .pilot-identity .biometrics-container {
-	flex-grow:1;
-	display:flex;
+	flex-grow: 1;
+	display: flex;
 	flex-direction: row;
 	padding-top: 0.5em;
-	width:100%;
+	width: 100%;
 	justify-content: center;
 }
 
-.biometrics, .mech-record {
+.biometrics,
+.mech-record {
 	cursor: pointer;
 }
 
-.biometrics, .mech-record {
+.biometrics,
+.mech-record {
 	transition: 0.2s ease-in-out;
 }
 
-.biometrics:hover, .mech-record:hover {
+.biometrics:hover,
+.mech-record:hover {
 	background-color: var(--highlight-hover) !important;
 	transition: 0.2s ease-in-out;
 }
 
-.pilot-identity .biometrics, .pilot-identity .mech-record {
+.pilot-identity .biometrics,
+.pilot-identity .mech-record {
 	align-self: flex-end;
 	width: 100%;
 }
 
-.pilot-identity .overline{
+.pilot-identity .overline {
 	font-size: 11px;
 	text-transform: uppercase;
 }
 
 .pilot-identity .row--dense {
 	padding: 5px;
-	line-height:11px;
+	line-height: 11px;
 	text-align: justify;
 }
