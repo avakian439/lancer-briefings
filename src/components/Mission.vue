@@ -26,7 +26,7 @@ export default {
   },
   computed: {
     icon() {
-      return `/icons/mission-${this.mission.status}.svg`;
+      return `${import.meta.env.BASE_URL}icons/mission-${this.mission.status}.svg`;
     },
     missionStatus() {
       if (this.mission.status === "start") return "Current\nBriefing";

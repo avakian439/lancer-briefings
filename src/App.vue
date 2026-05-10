@@ -19,7 +19,7 @@
 		</defs>
 	</svg>
 	<audio autoplay>
-		<source src="/startup.ogg" type="audio/ogg" />
+		<source :src="startupAudioPath" type="audio/ogg" />
 	</audio>
 </template>
 
@@ -35,11 +35,13 @@ export default {
 	},
 
 	data() {
+		const baseUrl = import.meta.env.BASE_URL;
 		return {
+			startupAudioPath: `${baseUrl}startup.ogg`,
 			animate: Config.animate,
 			initialSlug: Config.initialSlug,
-			planetPath: Config.planetPath,
-			icon: Config.icon,
+			planetPath: `${baseUrl}${Config.planetPath.replace(/^\//, "")}`,
+			icon: `${baseUrl}${Config.icon.replace(/^\//, "")}`,
 			header: Config.header,
 			pilotSpecialInfo: Config.pilotSpecialInfo,
 			clocks: [],
@@ -51,7 +53,7 @@ export default {
 		};
 	},
 	created() {
-		this.setTitleFavicon(Config.defaultTitle + " MISSION BRIEFING", Config.icon);
+		this.setTitleFavicon(Config.defaultTitle + " MISSION BRIEFING", this.icon);
 		this.importMissions(import.meta.glob("@/assets/missions/*.md", { query: '?raw', import: 'default' }));
 		this.importEvents(import.meta.glob("@/assets/events/*.md", { query: '?raw', import: 'default' }));
 		this.importClocks(import.meta.glob("@/assets/clocks/*.json"));

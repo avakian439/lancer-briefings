@@ -179,10 +179,10 @@ export default {
   },
   computed: {
     pilotPortrait() {
-      return `/pilots/${this.pilot.callsign.toUpperCase()}.webp`
+      return `${import.meta.env.BASE_URL}pilots/${this.pilot.callsign.toUpperCase()}.webp`
     },
     mechPortrait() {
-      return `/mechs/${this.pilot.callsign.toUpperCase()}.webp`
+      return `${import.meta.env.BASE_URL}mechs/${this.pilot.callsign.toUpperCase()}.webp`
     },
     pilotGear() {
       return [...lancerData.pilot_gear]
@@ -207,7 +207,7 @@ export default {
     },
     mechManufacturerIcon() {
       if (this.activeMech.manufacturer)
-        return `/faction-logos/${this.activeMech.manufacturer.toLowerCase()}.svg`
+        return `${import.meta.env.BASE_URL}faction-logos/${this.activeMech.manufacturer.toLowerCase()}.svg`
       return ''
     },
     pilotCode() {
